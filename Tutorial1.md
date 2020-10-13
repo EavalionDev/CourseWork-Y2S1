@@ -129,7 +129,7 @@ public class Spawner : MonoBehaviour
     }
 }
 ```
-### Connecting the pieces together
+### Connecting The Pieces Together
 
 Once done you can save your script by holding in "ctrl" and pressing the "S" key and then going back into Unity. The last thing to do is simply drag the script from the scripts folder and drop it onto the enemy spawner Gameobject, once there find the script inside of the objects
 inspector window and you will need to make the reference linkway between the enemy spawner object and the "centrePoint" and "enemy" Gameobjects you publicly declaired at the top of your script. To do this simply drag and drop the centre point Gameobject found in the heirarchy into the 
