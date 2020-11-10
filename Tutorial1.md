@@ -67,13 +67,14 @@ To do this in code write the if statement as shown below:
             countToRandomNumGen = 0;
         }
   ```
-  The second if statement you want will compare if the value of "countToSpawn" is greater than or equal to "randomTimerGenerator", if it is then spawn the enemy object at the enemy spawners transform position and do not adjust its rotation. After that you will need a final if statement inside of the "countToSpawn" if statement that checks if the "rotateSpeed" variable is less than or equal to "22.4f"
+  The second if statement you want will compare if the value of "countToSpawn" is greater than or equal to "randomTimerGenerator", if it is then spawn the enemy object at the enemy spawners transform position and do not adjust its rotation, then set "countToSpawn" back to "0". After that you will need a final if statement inside of the "countToSpawn" if statement that checks if the "rotateSpeed" variable is less than or equal to "22.4f"
   and if it is then increase the value by "0.3f".
   
   To do this in code write the if statement as shown below:
   ```
     if (countToSpawn >= randomTimerGenerator)
         {
+            countToSpawn = 0;
             Instantiate(enemy, transform.position, Quaternion.identity);
             if (rotateSpeed <= 22.4f)
             {
@@ -120,6 +121,7 @@ public class Spawner : MonoBehaviour
         }
         if (countToSpawn >= randomTimerGenerator)
         {
+            countToSpawn = 0;
             Instantiate(enemy, transform.position, Quaternion.identity);
             if (rotateSpeed <= 22.4f)
             {
