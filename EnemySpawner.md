@@ -1,7 +1,9 @@
 # 3D Enemy Arena Spawner
 For this tutorial I will show you how to create a randomised enemy spawner that will spawn in enemies around the borders of a circle style arena, the way this works is by having an invisible object rotate around the edges of the arena and then using counters inside the code it will spawn enemies at random times on its position. For this to work first we will need to set up a few things in unity as well as make sure we have the following:
  - a 3D unity project with a level in the style of a circle or square arena.
- - An enemy Gameobject that we want to spawn, have this made into a prefab by dragging and dopping the object from the hierarchy into the project window. 
+ - An enemy Gameobject that we want to spawn, have this made into a prefab by dragging and dopping the object from the hierarchy into the project window.
+   Make sure the enemy Gameobject has a Rigidbody and collider (prefferably a capsule), inside the constraints section of the Rigisbody freeze the y position and the
+   x and z rotation axis.
 
 ## Unity Set Up
 First thing we need to do is to create an empty gameobject that our enemies will spawn from, to do this:
