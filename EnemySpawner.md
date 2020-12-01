@@ -28,7 +28,19 @@ public class EnemySpawner : MonoBehaviour
     public GameObject centrePoint, enemy;
     
  ```
- Next you will need some private intergers to act as counters for three different tasks, write under your public variables "private int countToSpawn,countToRandomNumGen, randomTimerGenerator;". Underneath this you will also need a private float to control the rotation speed of your enemy spawner Gameobject, add this line under the intergers "private float rotateSpeed;".
+ Next you will need some private intergers to act as counters for three different tasks, write under your public variables "private int countToSpawn,countToRandomNumGen, randomTimerGenerator;". Underneath this you will also need a private float to control the rotation speed of your enemy spawner Gameobject, add this line under the intergers "private float rotateSpeed;". Overall the declared variables will look something like this:
+ ```
+ public class EnemySpawner : MonoBehaviour
+{
+    public GameObject centrePoint, enemy;
+
+    private int countToSpawn, countToRandomNumGen, randomTimerGenerator;
+    private float rotateSpeed;
+
+    // Start is called before the first frame update
+    void Start()
+ 
+ ```
  
  ### Start Method
  
