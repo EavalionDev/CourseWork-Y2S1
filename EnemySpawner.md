@@ -17,7 +17,7 @@ First thing we need to do is to create an empty gameobject that our enemies will
  
  ### Declaring Variables
  
- The first thing you need to do is declare the variable that will be used within the script, lets start with declaring the Gameobjects, you will want these to be declared as public to access them outside of the script Under the class. Under the "public class" and above "void start()" write "public GameObject centrePoint, enemy;", if done correctly it will look as shown below. 
+ The first thing you need to do is declare the variable that will be used within the script, lets start with declaring the Gameobjects, you will want these to be declared as public to access them outside of the script Under the class. Under the "public class" and above "void start()" type "public GameObject centrePoint, enemy;", if done correctly it will look as shown below. 
  ```
 using System.Collections;
 using System.Collections.Generic;
