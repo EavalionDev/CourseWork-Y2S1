@@ -47,4 +47,20 @@ public class PlayerMovement : MonoBehaviour
 ```
 ### Start Method
 
-Inside the start method 
+Inside the start method we arew going to create the linkway between our private Rigidbbody variable and the component within the inspector, to do this we use a function known as "GetComponent". Type "rb = GetComponent<Rigidbody>();" and this will create the link between the two. Last thing to do within the start function is to set the states (we want them to be false) at which the booleans will start with when the script first runs, to do this simply type out the boolean names and type " = false;" after tyhe name. Here is an example of the first boolean: "forward = false;", using this method and example fill out the rest of the boolean states, once complete it should look something like this:
+ 
+ ```
+     // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        forward = false;
+        backward = false;
+        left = false;
+        right = false;
+    }
+```
+
+### Update Method
+
+Here inside the update method we are going to check for key inputs that will determain which direction we want force to be applied to the player moving it into the corrospionding direction. To do this we will need to make use of a bunch of "if" statements and set the booleans within them accordingly. The most commonly used set of key inputs for player movement by todays games are "W,A,S,D". 
