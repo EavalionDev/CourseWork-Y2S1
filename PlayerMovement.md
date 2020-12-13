@@ -63,4 +63,45 @@ Inside the start method we arew going to create the linkway between our private 
 
 ### Update Method
 
-Here inside the update method we are going to check for key inputs that will determain which direction we want force to be applied to the player moving it into the corrospionding direction. To do this we will need to make use of a bunch of "if" statements and set the booleans within them accordingly. The most commonly used set of key inputs for player movement by todays games are "W,A,S,D". 
+Here inside the update method we are going to check for key inputs that will determain which direction we want force to be applied to the player moving it into the corrospionding direction. To do this we will need to make use of a bunch of "if" statements and set the booleans within them accordingly. The most commonly used set of key inputs for player movement by todays games are "W,A,S,D". So the first thing we will need to check for is input, to do this type  "if" and tap the "Tab" key twice which will format the syntax of the "if" statement for you, then fill in the brackets of the "if" statement with this "(Input.GetKey(KeyCode.W))", this will check for continous input from the "W" key using the "GetKey" function. Inside the curley brackets type "forward = true;" which will set the boolean to true when this condition is set. Now that we have set up the "forward" boolean to true under the correct condition we will also want a very similar condition that simply turns it back off again when the there is no registered input with the "W" key. To do this copy the same "if" statement we just created and paste it on the lines below, once done simple add a "!" before "Input" inside the brackets and then change the boolean inside the curley braces from "true" to "false". This will make sure the boolean is set to "false"  when the condition is not met. Now using the same method as shown above to set up both the input check and non input check for the "W" key, do the same with the "A,S,D" keys making sure you use the "left" boolean for the "A" key, "right" boolean for the "D" key and "backward" boolean for the "S" key. Once finished if done correctly it should look something like this:
+
+```
+   // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.W))
+        {
+            forward = true;
+        }
+        if (!Input.GetKey(KeyCode.W))
+        {
+            forward = false;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            left = true;
+        }
+        if (!Input.GetKey(KeyCode.A))
+        {
+            left = false;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            backward = true;
+        }
+        if (!Input.GetKey(KeyCode.S))
+        {
+            backward = false;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            right = true;
+        }
+        if (!Input.GetKey(KeyCode.D))
+        {
+            right = false;
+        }
+
+    }
+```
+
