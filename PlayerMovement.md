@@ -107,4 +107,14 @@ Here inside the update method we are going to check for key inputs that will det
 
 ### FixedUpdate Method
 
-We will want to use the "FixedUpdate" method to help handle our physics calculations better, to get this method set up within Visual Studios just under the "Update" method type "private void FixedUpdate()" then Visual Studio should automatically add the curley brackets if not simply add them in. 
+We will want to use the "FixedUpdate" method to help handle our physics calculations better, to get this method set up within Visual Studios just under the "Update" method type "private void FixedUpdate()" then Visual Studio should automatically add the curley brackets if not simply add them in. We are going to use another series of "if" statements and to adjust the forces applied to the player as well as the value of drag applied to the "Rigidbody" component to control the sliding effect when moving.
+
+The first "if" statement will simply set the drag value for when no input from any of the keys is being registered, we want to up the drag here so when the player is moving then lets go of the input the new drag value is applied to assist in slowing the player down. Type "if" then tap "Tab" tweice to get format the statement and inside the brackets type"!forward && !backward && !left && !right", this will make sure all booleans that check for input are not true. Inside this new "if" statement to set the drag simply type "rb.drag = 6f;", once done it should look like this:
+
+```
+if (!forward && !backward && !left && !right)
+        {
+            rb.drag = 6f;
+        }
+```
+On to the next "if" statement we want which will check to see if the "forward" boolean is set to true, if so then we will adjust the drag again as well as apply force in the forward direction of the objects transform component. To do this using the same method above create an "if" statement and inside the brackets type "forward" which will check to see if this boolean is true or not. Inside the curely brackets type "rb.AddForce(transform.forward * speed * Time.fixedDeltaTime, ForceMode.Impulse);" and underneath type "rb.drag = 1f;". The first line will apply force to the objects forward transform using the "AddForce" function mulitplied by the "speed" variable that will be set later on which is then multiplied by "Time.fixedDeltaTime" and finally the force mode is set to "ForceMode.Impulse", this will apply the force instantaneously rather than gradually over time. The second line simply changes the drag value back to 1 while the object is moving otherwise if left on 6 would slow it down considerably. 
