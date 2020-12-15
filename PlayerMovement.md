@@ -117,7 +117,7 @@ if (!forward && !backward && !left && !right)
             rb.drag = 6f;
         }
 ```
-On to the next "if" statement we want which will check to see if the "forward" boolean is set to true, if so then we will adjust the drag again as well as apply force in the forward direction of the objects transform component. To do this using the same method above create an "if" statement and inside the brackets type "forward" which will check to see if this boolean is true or not. Inside the curely brackets type "rb.AddForce(transform.forward * speed * Time.fixedDeltaTime, ForceMode.Impulse);" and underneath type "rb.drag = 1f;". The first line will apply force to the objects forward transform using the "AddForce" function mulitplied by the "speed" variable that will be set later on which is then multiplied by "Time.fixedDeltaTime" and finally the force mode is set to "ForceMode.Impulse", this will apply the force instantaneously rather than gradually over time. The second line simply changes the drag value back to 1 while the object is moving otherwise if left on 6 would slow it down considerably. 
+On to the next "if" statement we want which will check to see if the "forward" boolean is set to true, if so then we will adjust the drag again as well as apply force in the forward direction of the objects transform component. To do this using the same method above create an "if" statement and inside the brackets type "forward" which will check to see if this boolean is true or not. Inside the curely brackets type "rb.AddForce(transform.forward * speed * Time.fixedDeltaTime, ForceMode.Impulse);" and underneath type "rb.drag = 1f;". The first line will apply force to the objects forward transform using the "AddForce" function mulitplied by the "speed" variable that will be set later on which is then multiplied by "Time.fixedDeltaTime" and finally the force mode is set to "ForceMode.Impulse", this will apply the force instantaneously rather than gradually over time. The second line simply changes the drag value back to 1 while the object is moving otherwise if left on 6 would slow it down considerably.
 
 ```
 if (forward)
@@ -126,3 +126,4 @@ if (forward)
             rb.drag = 1f;
         }
 ```
+
