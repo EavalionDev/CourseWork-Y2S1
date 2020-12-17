@@ -108,4 +108,25 @@ Scripts by default come with a start and update method but we will not need eith
 - Increase the score by 1
 - Destroy the pick up object
 
-To start with the optional sound type "sound.Play(0);", this will play the sound file assigned to the public variable. Next on the line below type "Score.score++;", this is where our public static int comes in to play from the previous script, this line of code accesses the script and the "score" variable and incriments it by a value of 1.0. Lastly on the line below type "Destroy(gameObject);", this will destroy the GameObject the script is attatched to, it's important to do this last to make sure the other lines of code are executed before this happens.
+To start with the optional sound type "sound.Play(0);", this will play the sound file assigned to the public variable. Next on the line below type "Score.score++;", this is where our public static int comes in to play from the previous script, this line of code accesses the script and the "score" variable and incriments it by a value of 1.0. Lastly on the line below type "Destroy(gameObject);", this will destroy the GameObject the script is attatched to, it's important to do this last to make sure the other lines of code are executed before this happens. If all is done correctly it should look like this:
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PickUp : MonoBehaviour
+{
+    public AudioSource sound;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            sound.Play(0);
+            Score.score++;
+            Destroy(gameObject);
+        }
+    }
+}
+```
