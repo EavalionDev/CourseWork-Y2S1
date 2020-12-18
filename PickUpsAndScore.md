@@ -85,9 +85,15 @@ public class Score : MonoBehaviour
     }
 }
 ```
+
+### Linking The Text
+
+After the script has been made head back into Unity, once there locate the "Score" script within the canvas inspector window, Drag and drop the "Score" Text object into the empty slot marked "Score Text".
+
+
 ## Setting Up The Pick Up Items
 
-Head back into Unity, it is prefferable if you have an already prefab pick up item but if not simply create one using Unity's basic 3D shapes and as long as it has a collider that matches it's shape it should be fine. Simply re-name it "PickUp" and prefab it using the same method shown in the first tutorial. It is not essential but for the purpose of adding a little extra to our pick up if you have an audio clip you would like to play when the items are interacted with this tutorial will include these steps, if not simply disregard them. If you have an audio clip you will need to add an empty GameObject to act as your storage for all audio sources, I simply named mine "Audio", once created add an "Audio Source" component to the object and drag and drop your audio clip into the "AudioClip" section of the component. Create a script called "PickUpScript" and add it your "PickUp" prefab. Double check the player GameObject has the tag of "Player" applied to it inside the inpector window, if not you can select the tag drop down at the top of the inspector window and either select the "Player" tag or select create and manually type "Player" into an empty slot then head back into the inspector and assign the new tag. Now all that is left to set up is the placment of your pick up items, place your prefab into your scene and duplicate it and place multiple prfabs arouns the scene in areas your player will be able to reach.
+It is preferable if you have an already prefab pick up item but if not simply create one using Unity's basic 3D shapes and as long as it has a collider that matches it's shape and has "Is Trigger" ticked it should be fine. Simply re-name it "PickUp" and prefab it using the same method shown in the first tutorial. It is not essential but for the purpose of adding a little extra to our pick up if you have an audio clip you would like to play when the items are interacted with this tutorial will include these steps, if not simply disregard them. If you have an audio clip you will need to add an empty GameObject to act as your storage for all audio sources, I simply named mine "Audio", once created add an "Audio Source" component to the object and drag and drop your audio clip into the "AudioClip" section of the component. Create a script called "PickUpScript" and add it your "PickUp" prefab. Double check the player GameObject has the tag of "Player" applied to it inside the inpector window, if not you can select the tag drop down at the top of the inspector window and either select the "Player" tag or select create and manually type "Player" into an empty slot then head back into the inspector and assign the new tag. Now all that is left to set up is the placment of your pick up items, place your prefab into your scene and duplicate it and place multiple prfabs arouns the scene in areas your player will be able to reach.
 
 ## Pick Up Script
 
@@ -130,3 +136,8 @@ public class PickUp : MonoBehaviour
     }
 }
 ```
+
+## Final Set Up
+
+Head back into Unity, if you have chosen to follow the optional audio additon to the pick up prefab, locate the script inside the prefab and drag and drop the "Audio" object into the empty slot labelled "Sound", make sure you overide changes to effect all prefabs. This should be everything you need, you can now press play and move your player into the pick up objects which should now play a sound, increase the on screen score and be destroyed. I hope you learned something and ultimately enjoyed this four part tutroial.
+
