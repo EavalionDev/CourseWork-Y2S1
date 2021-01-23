@@ -4,11 +4,10 @@
 I started off by programming the enemy spawner script. This was achieved by roatating an object around a centre point and then having a two integers be incrimented. once one integer hits a value of 60 to count for a second it would randomly set the value of another integer and then reset the value of the first to 0 to repeat this process once every second. I then have it set so that if the second integer that is being incremented becomes greater than or equal to the value of the randomly set variable it would spawn an enemy and then slightly increase the speed of the objects rotation to help keep the timing and location of spawning random.
 ![a](https://user-images.githubusercontent.com/72077595/105555741-f4e60d80-5d01-11eb-8b09-24949bce9ba6.PNG)
 
-## 16/10/20
-Free time - Spent some time researching how to program shaders for the materialise effect for my 3D game
-
 ## 20/10/20
 Lesson - Programming enemy movement script
+Once the spawner script was in place I then moved on to creating the enemy movement script. The method I used for this was by using Ray casting while having the enemy look in the direction of the player, then applied force to move the enemy around. I ran into an issue with getting the enemy to contantly look at the player and originally had calculated the distance between the enemy and the player object, then tried to use this value as the axis values for a vector3 variable. I got around this by instead having the enemy locate the player object through "player = GameObject.Find("Player");" inside the start method. I then would use the raycast to hit the player and use "rb.AddForce(new Vector3(transform.forward.x * speed * Time.deltaTime, 0, transform.forward.z * speed * Time.deltaTime), ForceMode.Impulse);".
+![b](https://user-images.githubusercontent.com/72077595/105568356-9a17da80-5d30-11eb-9b62-6df5b1684239.PNG)
 
 ## 27/10/20
 Lesson - Started work on a player movement script
