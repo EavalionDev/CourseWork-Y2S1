@@ -14,6 +14,7 @@ I started working on the Player movement script and found myself running into se
 
 ## 16/10/20 | 03/11/20 | 4/11/20
 I spent some days researching how to program shaders from scratch so I could make my own effects for my 3D game as well as future projects. It was a real challenge because the programming language used is not C# but rather "ShaderLab". Took a few days of research and following along but managed to get a script that would make the material fully transparent and then create a variable that would allow the value of transparency be adjusted through C# scripts.
+
 ![d](https://user-images.githubusercontent.com/72077595/105570255-0ea64580-5d40-11eb-85c5-8516bb679a1c.PNG)
 
 ## 13/11/20
