@@ -20,19 +20,7 @@ I spent some days researching how to program shaders from scratch so I could mak
 I further developed a script I had for my 3D game, I needed to have the enemies shrink when they are caught within a suction zone, I ran into some issues with having the enemies shrink at an even pace and with the colliders messing with the collider of the player it is being sucked into. I fixed this by disabling the collider and using Vector3.Lerp to shrink the object while then disabling each mesh renderer within the object when it shrunk to a set value, this helped give the impression of it dissapearing into the source of suction.
 ![e](https://user-images.githubusercontent.com/72077595/105570424-537eac00-5d41-11eb-8405-7a258ce02701.PNG)
 
+## 19/11/20 | 28/11/20
+I spent time researching how to gain the relative direction of Vector3 from one script and use it to direct force on to an enemy object in another script. I did this by referencing the Vector3 "LaunchDirection" variable in another script that sets it's value to be equal to the players transform.forward values within the start method. I then would add force to the enemy when they are pushed back using the new variable values as a source of direction within a ray cast that checks for walls. The only issue I had with this was using velocity at first instead of add force which again possed problems with the collisions.
+![f](https://user-images.githubusercontent.com/72077595/105571646-acead900-5d49-11eb-96d4-71842726211e.PNG)
 
-
-## 19/11/20
-Free time - Researched how get the relative direction of a dynamic Vector3 from one script and use to direct force on to an enemy object in another script
-
-## 24/11/20
-Lesson - Set Up and worked on Pick up items script
-
-## 28/11/20
-Free time - Implemented a reference to a Vector3 direction to add force to an enemy in my 3D game
-
-## 1/12/20
-Lesson - Created a Score script then linked it to the pick up script to have them work together
-
-## 10/12/20
-Free time - Implemented scripts into project making sure to link them with the use of public static variables 
